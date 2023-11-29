@@ -1,0 +1,29 @@
+.
+├── data
+│   ├── external                   <- Data from third party sources.
+│   ├── transformed                <- Intermediate data that has been transformed.
+│   ├── processed                  <- The final, canonical data sets for modeling.
+│   │   ├── train                  <- Training set
+│   │   └── test                   <- Testing set
+│   ├── raw                        <- The original, immutable data dump.
+│   └── forward                    <- Storage of sent photos from users in telegram
+├── model                          <- Trained and serialized model, model weights, or model summaries
+├── chekpoints                     <- Temporary storage chekpoints
+├── reports                        <- Generated analysis as HTML, PDF, etc.
+│   └── figures                    <- Generated graphics and figures to be used in reporting
+├── src                            <- Source code for use in this project.
+│   ├── image_recognition          
+│   │   ├── models                 <- Scripts to train models and then use trained models to predictions make
+│   │   ├── predict                <- Scripts to predictions make
+│   │   ├── tools                  <- Utilities for training the model
+│   │   │   └── pytorchtools.py          <- Early stops
+│   │   └── transforms.py
+│   └── bot                        <- Configuration of the bot's telegrams
+│       ├── handlers.py                  <- Handlers
+│       ├── kb.py                        <- Menu control keyboard
+│       ├── states.py                    <- Determining the state of the bot to switch between models
+│       ├── text.py                      <- Text description - output messages to the user
+│       └── utils.py                     <- Plugins and models, a dispatcher for transferring data to models and will return a response to the user
+├── requirements.txt               <- The requirements file for reproducing the analysis environment.
+├── Dockerfile                     <- use the Docker to install the project
+└── setup.py                       <- Make this project with pip 

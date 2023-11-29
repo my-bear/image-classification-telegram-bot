@@ -1,0 +1,7 @@
+{
+   "path_data": "./data/processed",
+   "path_date_eval": "./data/processed/eval",
+   "path_checkpoint": "./chekpoints",
+   "path_model_load": "./model",
+   "reports_fig": "./reports/figures"
+}
