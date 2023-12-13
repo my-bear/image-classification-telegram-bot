@@ -23,8 +23,6 @@ async def generate_text(prompt) -> dict:
                 {"role": "user", "content": prompt}
             ]
         )
-        # return response
-        # 
         return response.choices[0].message.content, response.usage.total_tokens
     except Exception as e:
         logging.error(e)

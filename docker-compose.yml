@@ -1,0 +1,29 @@
+version: '3'
+services:
+  image-classification-telegram-bot:
+    image: telebot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true  
+    tty: true
+    container_name: telebot_devcontainer
+    # deploy:
+    #   mode: replicated
+    #   replicas: 1
+    #   endpoint_mode: vip
+    #   resources:
+    #     limits:
+    #       cpus: '0.50'
+    #       memory: 100M
+    #       pids: 1
+    #     reservations:
+    #       cpus: '0.25'
+    #       memory: 50M
+
+    # environment:
+ 
+    # volumes:
+    #   home/roman/projects/image-classification-telegram-bot:home/projects/image-classification-telegram-bot
+
+    network_mode: host

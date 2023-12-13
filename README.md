@@ -47,32 +47,3 @@ Create a ".env" file and put a token in it
 ```
 python scripts/telegram_bot.py
 ```
-<br/>
-
-# Docker
-
-To build docker image:
-
-```
-docker build -t <> .
-```
-
-To pull docker image from Hub:
-
-```angular2html
-docker pull <>
-```
-
-To run image in a container:
-
-```
-docker run -it --entrypoint=/bin/bash <>
-```
-
-To run training in a container for example:
-
-```
-python scripts/train_model.py <> --output_dir models
-```
-
-<br/>

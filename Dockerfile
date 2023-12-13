@@ -1,4 +1,10 @@
 FROM python:3.9
-MAINTAINER Roman Medvedev <medvedev.daff@gmail.com>
+LABEL maintainer = "medvedev.daff@gmail.com"
+
+# Copy requirements.txt to the working directory
 COPY . .
-RUN python -m venv
+
+# Install the Python dependencies on the virtual environment
+RUN python -m pip install --upgrade pip \
+ && pip install --no-cache-dir -r requirements.txt \
+ && rm requirements.txt

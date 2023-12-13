@@ -1,0 +1,12 @@
+version: '3'
+services:
+  image-classification-telegram-bot:
+    volumes:
+      - .:/workspace:cached
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"

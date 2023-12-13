@@ -1,0 +1,20 @@
+{
+	"name": "telegram-bot",
+	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
+	"service": "image-classification-telegram-bot",
+	"containerEnv": {
+	 "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
+	 "GITHUB_USER": "${localEnv:GITHUB_USER}"
+	},
+	"workspaceFolder": "/workspace",
+	"customizations": {
+	 "vscode": {
+	  "extensions": [
+		"formulahendry.code-runner",
+		"ms-vscode-remote.vscode-remote-extensionpack"
+	  ]
+	 }
+	},
+	"forwardPorts": [3000],
+	"shutdownAction": "stopCompose"
+  }
